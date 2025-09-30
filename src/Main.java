@@ -1,15 +1,73 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.io.*;
+import java.util.Arrays;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+public class Main  {
+    public static void main(String[] args) throws IOException {
+
+        String ruta1 = "Input-Output_Stream/texto1.txt";
+        String ruta2 = "Input-Output_Stream/texto2.txt";
+
+        AñadirContenido(ruta1,ruta2);
+
+    }
+    public static void CrearArchivo(String ruta, String contenido) {
+        try (FileWriter fw = new FileWriter(ruta)) {
+            fw.write(contenido);
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
+
+    public static void CopiarArchivo(String ruta, String ruta2) throws IOException {
+
+        FileInputStream in = new FileInputStream(ruta);
+        FileOutputStream out = new FileOutputStream(ruta2);
+
+        int caracter= 0;
+        byte[] pb = new byte[in.available()];
+        System.out.println("mensaje de depuracion (bytes leidos) " + Arrays.toString(pb));
+
+        try {
+            while (true){
+                int bytesLeidos = in.read();
+                if (bytesLeidos == -1) {
+                    break;
+
+                } else {
+                    byte bp = (byte) bytesLeidos;
+                    pb[caracter] = bp;
+                    caracter++;
+                }
+            }
+            System.out.println("mensaje de depuracion (ver si se copian) " + Arrays.toString(pb));
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        out.write(pb);
+        System.out.println("datos escritos en el archivo de destino.");
+
+        in.close();
+        out.close();
+
+    }
+
+    public static void AñadirContenido (String ruta, String ruta2) throws IOException {
+        FileInputStream in = new FileInputStream(ruta);
+        FileOutputStream out = new FileOutputStream(ruta2,true);
+        int caracter;
+        try {
+            while ((caracter = in.read())!= -1) {
+                out.write(caracter);
+            }
+            System.out.println("mensaje de depuracion (comprobar si llega a leer todos los bytes) -> " + caracter);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        in.close();
+        out.close();
+    }
+
 }
