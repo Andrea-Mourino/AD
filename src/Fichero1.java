@@ -1,10 +1,9 @@
 import java.io.File;
-    public class App {
-
-        public static final String directorio = "/home/dam/Documentos/Andrea/AD/arquivosdir/Products1.txt";
-        public static String arquivosdir = "/home/dam/Documentos/Andrea/AD/arquivosdir";
-        public static String subdir = "/home/dam/Documentos/Andrea/AD/arquivosdir/subdir";
-        public static String products2_txt = "/home/dam/Documentos/Andrea/AD/arquivosdir/subdir/Products2.txt";
+    class App {
+        public static final String directorio = "C:\\Users\\Andrea\\Desktop\\DAM2\\AD\\arquivosdir\\Products1.txt";
+        public static String arquivosdir = "C:\\Users\\Andrea\\Desktop\\DAM2\\AD\\arquivosdir";
+        public static String subdir = "C:\\Users\\Andrea\\Desktop\\DAM2\\AD\\arquivosdir\\subdir";
+        public static String products2_txt = "C:\\Users\\Andrea\\Desktop\\DAM2\\AD\\arquivosdir\\subdir\\Products2.txt";
 
 
         public static void ejercicio1() {
@@ -27,18 +26,10 @@ import java.io.File;
         }
 
         public static void main(String[] args) {
-            ejercicio9();
+            ejercicio1();
+
         }
 
-        public static void ejercicio9() {
-            Fichero1.borrarFicheiro(subdir, "product2_txt");
-            Fichero1.borrarDirectorio(subdir);
-            Fichero1.borrarDirectorio(arquivosdir);
-        }
-
-        public static void ejercicio8() {
-            Fichero1.borrarFicheiro(arquivosdir, "Products1.txt");
-        }
 
         public static void ejercicio5() {
             Fichero1.modoAcceso(arquivosdir, "Products1.txt");
@@ -52,6 +43,17 @@ import java.io.File;
         public static void ejercicio7() {
             System.out.println(Fichero1.mEscritura(arquivosdir, "Products1.txt"));
         }
+
+        public static void ejercicio8() {
+            Fichero1.borrarFicheiro(arquivosdir, "Products1.txt");
+        }
+
+        public static void ejercicio9() {
+            Fichero1.borrarFicheiro(subdir, "product2_txt");
+            Fichero1.borrarDirectorio(subdir);
+            Fichero1.borrarDirectorio(arquivosdir);
+        }
+
 
         public static void ejercicio10() {
             File file = new File(arquivosdir);
