@@ -79,11 +79,11 @@ public class PracticaJDBC_Anime {
     private static void insertarExtra(Connection conn) throws SQLException {
         String sql = """
                 INSERT INTO anime (nome, descripcion, data, puntuacion)
-                VALUES ('DevilMan Crybaby', 'Serie de una Profecia apocaliptica de demonios', '2018-01-05', 100)
+                VALUES ('Jojos', 'Serie de un vampiro metrosexual', '2012-10-06', 100)
                 """;
         try (Statement stmt = conn.createStatement()) {
             stmt.executeUpdate(sql);
-            System.out.println("Insertado anime adicional: DevilMan Crybaby");
+            System.out.println("Insertado anime adicional: Jojos");
         }
     }
 
@@ -100,18 +100,18 @@ public class PracticaJDBC_Anime {
     }
 
     private static void actualizarPuntuacion(Connection conn) throws SQLException {
-        String sql = "UPDATE anime SET puntuacion = 95 WHERE nome = 'DevilMan Crybaby'";
+        String sql = "UPDATE anime SET puntuacion = 95 WHERE nome = 'Jojos'";
         try (Statement stmt = conn.createStatement()) {
             stmt.executeUpdate(sql);
-            System.out.println("Puntuación actualizada para DevilMan Crybaby.");
+            System.out.println("Puntuación actualizada para Jojos.");
         }
     }
 
     private static void eliminarRegistro(Connection conn) throws SQLException {
-        String sql = "DELETE FROM anime WHERE nome = 'Dragon Ball'";
+        String sql = "DELETE FROM anime WHERE nome = 'Evangelion'";
         try (Statement stmt = conn.createStatement()) {
             stmt.executeUpdate(sql);
-            System.out.println("Eliminado registro: Dragon Ball");
+            System.out.println("Eliminado registro: Evangelion");
         }
     }
 }
