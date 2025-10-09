@@ -1,5 +1,6 @@
+package Practica2_Stream;
+
 import java.io.*;
-import java.util.Arrays;
 
 public class Main  {
     public static void main(String[] args) throws IOException {

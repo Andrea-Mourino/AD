@@ -1,3 +1,5 @@
+package Practica2_Stream;
+
 import java.io.*;
 
 public class Parte2 {
