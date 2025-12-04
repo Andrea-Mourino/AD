@@ -12,24 +12,28 @@ import java.util.Optional;
 @Service
 public class TitorService {
 
-    @Autowired
-    private TitorRepository titorRepository;
+    private final TitorRepository titorRepository;
 
+    @Autowired
+    public TitorService(TitorRepository titorRepository) {
+        this.titorRepository = titorRepository;
+    }
     @Transactional
-    public Titor crearOuActualizarTitor (Titor titor) {
+    public Titor crearOactualizarTitor(Titor titor) {
         return titorRepository.save(titor);
     }
 
-    public List<Titor> obterTodosTitores() {
+    public List<Titor> obtenerTodosOsTitores() {
         return titorRepository.findAll();
     }
 
-    public Optional<Titor> obterPorId(Long id) {
+    public Optional<Titor> obtenerTitorPorId(Long id) { // Cambiado a Long
         return titorRepository.findById(id);
     }
 
-    public void eliminarTitor(Long id) {
-        titorRepository.deleteById(id);
+    public Titor actualizarTitor(Titor titor){
+        return titorRepository.save(titor);
     }
+
 
 }
