@@ -2,32 +2,29 @@ package org.example.controller;
 
 import io.swagger.v3.oas.annotations.Operation;
 import org.example.model.Alumno;
-import org.example.repository.AlumnoRepository;
 import org.example.service.AlumnoService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(AlumnoController.MAPPING)
+@RequestMapping("/alumnos")
 public class AlumnoController {
 
-    public static final String MAPPING = "/api";
+    private final AlumnoService alumnoService;
 
-    @Autowired
-    private AlumnoRepository alumnoRepository;
-    @Autowired
-    private AlumnoService alumnoService;
+    public AlumnoController(AlumnoService alumnoService) {
+        this.alumnoService = alumnoService;
+    }
 
-
+    @Operation(summary = "Crear un alumno")
     @PostMapping
     public ResponseEntity<Alumno> crearAlumno(@RequestBody Alumno alumno) {
         return ResponseEntity.ok(alumnoService.crearOActualizarAlumno(alumno));
     }
 
+    @Operation(summary = "Obter un alumno polo seu ID")
     @GetMapping("/{id}")
     public ResponseEntity<Alumno> obterAlumno(@PathVariable Long id) {
         return alumnoService.obtenerPorId(id)
@@ -35,7 +32,7 @@ public class AlumnoController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-
+    @Operation(summary = "Modificar un alumno")
     @PutMapping("/{id}")
     public ResponseEntity<Alumno> modificarAlumno(@PathVariable Long id, @RequestBody Alumno alumno) {
         Optional<Alumno> op = alumnoService.obtenerPorId(id);
@@ -53,15 +50,12 @@ public class AlumnoController {
     }
 
     @Operation(summary = "Eliminar un alumno")
-    @DeleteMapping("/alumno/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminarAlumno(@PathVariable Long id) {
-        if (alumnoRepository.existsById(id)) {
-            alumnoRepository.deleteById(id);
+        if (alumnoService.obtenerPorId(id).isPresent()) {
+            alumnoService.eliminarAlumno(id);
             return ResponseEntity.noContent().build();
-        } else {
-            return ResponseEntity.notFound().build();
         }
+        return ResponseEntity.notFound().build();
     }
-
-
 }
