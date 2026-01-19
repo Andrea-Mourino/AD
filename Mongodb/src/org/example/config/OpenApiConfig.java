@@ -17,7 +17,7 @@ public class OpenApiConfig {
 
     //http://localhost:8080/swagger-ui/swagger-ui/index.html
     @Bean
-    public OpenAPI customOpenAPI() {
+    public OpenApiConfig() {
 
         return new OpenAPI()
                 .info(new Info().title(appName)
