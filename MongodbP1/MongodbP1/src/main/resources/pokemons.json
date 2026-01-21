@@ -1,0 +1,32 @@
+[
+    {
+        "nome": "Zorua",
+        "tipo": ["Siniestro"],
+        "nivel": 45,
+        "habilidades": ["Finta", "Persecución", "Mofa", "Golpe Bajo"]
+    },
+    {
+        "nome": "Mew",
+        "tipo": ["Psíquico"],
+        "nivel": 100,
+        "habilidades": ["Psíquico", "Transformación", "Bola Sombra", "Rayo Hielo"]
+    },
+    {
+        "nome": "Shaymin",
+        "tipo": ["Planta"],
+        "nivel": 70,
+        "habilidades": ["Aromaterapia", "Hoja Mágica", "Drenadoras", "Fuerza Lunar"]
+    },
+    {
+        "nome": "Eevee",
+        "tipo": ["Normal"],
+        "nivel": 30,
+        "habilidades": ["Mordisco", "Rapidez", "Refuerzo", "Doble Filo"]
+    },
+    {
+        "nome": "Pikachu",
+        "tipo": ["Eléctrico"],
+        "nivel": 100,
+        "habilidades": ["Rayo", "Ataque Rápido", "Impactrueno", "Cola Férrea"]
+    }
+]

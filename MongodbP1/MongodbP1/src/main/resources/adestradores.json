@@ -1,0 +1,27 @@
+[
+    {
+        "nome": "Lía Brétema",
+        "idade": 19,
+        "cidade": "Villa Neblina"
+    },
+    {
+        "nome": "Taro Mitsugi",
+        "idade": 27,
+        "cidade": "Ciudad Cerezo"
+    },
+    {
+        "nome": "Helena Storm",
+        "idade": 34,
+        "cidade": "Pueblo Trueno"
+    },
+    {
+        "nome": "Ruxo do Sil",
+        "idade": 52,
+        "cidade": "Aldea Silvania"
+    },
+    {
+        "nome": "Kai Redwood",
+        "idade": 16,
+        "cidade": "Bosque Carmesí"
+    }
+]
