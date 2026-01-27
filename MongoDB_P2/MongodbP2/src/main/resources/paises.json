@@ -1,0 +1,57 @@
+[
+  {
+    "id": "pais4",
+    "nome": "España",
+    "organizacion": "Monarquía Parlamentaria",
+    "partidos": [
+      "PSOE",
+      "PP",
+      "Vox"
+    ],
+    "id_presidente": "pres4"
+  },
+  {
+    "id": "pais5",
+    "nome": "Alemania",
+    "organizacion": "República Federal Parlamentaria",
+    "partidos": [
+      "SPD",
+      "CDU/CSU",
+      "Los Verdes"
+    ],
+    "id_presidente": "pres5"
+  },
+  {
+    "id": "pais6",
+    "nome": "Argentina",
+    "organizacion": "República Federal",
+    "partidos": [
+      "Unión por la Patria",
+      "Juntos por el Cambio",
+      "La Libertad Avanza"
+    ],
+    "id_presidente": "pres6"
+  },
+  {
+    "id": "pais7",
+    "nome": "México",
+    "organizacion": "República Federal",
+    "partidos": [
+      "MORENA",
+      "PAN",
+      "PRI"
+    ],
+    "id_presidente": "pres7"
+  },
+  {
+    "id": "pais8",
+    "nome": "Japón",
+    "organizacion": "Monarquía Constitucional Parlamentaria",
+    "partidos": [
+      "Partido Liberal Democrático",
+      "Partido Democrático Constitucional",
+      "Komeito"
+    ],
+    "id_presidente": "pres8"
+  }
+]

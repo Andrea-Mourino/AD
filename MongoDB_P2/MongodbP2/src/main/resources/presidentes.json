@@ -1,0 +1,32 @@
+[
+  {
+    "id": "pres4",
+    "nome": "Perro Sánchez",
+    "idade": 51,
+    "partido": "PSOE"
+  },
+  {
+    "id": "pres5",
+    "nome": "Frank-Walter Steinmeier",
+    "idade": 67,
+    "partido": "PODEMOS"
+  },
+  {
+    "id": "pres6",
+    "nome": "Javier Milei",
+    "idade": 53,
+    "partido": "La Libertad Avanza"
+  },
+  {
+    "id": "pres7",
+    "nome": "Claudia Sheinbaum",
+    "idade": 61,
+    "partido": "VOX"
+  },
+  {
+    "id": "pres8",
+    "nome": "Fumio Kishida",
+    "idade": 67,
+    "partido": "Partido Liberal Democrático"
+  }
+]
