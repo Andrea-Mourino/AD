@@ -1,5 +1,7 @@
-import org.codewith.practica2_mongodb.service.PaisService;
-import org.codewith.practica2_mongodb.service.PresidenteService;
+package org.example;
+
+import org.example.service.PaisService;
+import org.example.service.PresidenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

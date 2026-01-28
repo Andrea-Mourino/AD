@@ -1,6 +1,8 @@
+package org.example.service;
+
 import com.google.gson.Gson;
-import org.codewith.practica2_mongodb.model.Pais;
-import org.codewith.practica2_mongodb.repository.PaisRepository;
+import org.example.model.Pais;
+import org.example.repository.PaisRepository;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 
@@ -36,7 +38,7 @@ public class PaisService {
         Pais pais = paisRepo.findById(idPais).orElse(null);
         if (pais != null) {
             pais.setOrganizacion(nuevaOrganizacion);
-            paisRepo.save(pais); // Al guardar con el mismo ID, machaca el dato anterior (Update)
+            paisRepo.save(pais);
             System.out.println("País actualizado: " + pais.getNome());
         } else {
             System.out.println("No se encontró el país con ID: " + idPais);

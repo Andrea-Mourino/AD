@@ -1,8 +1,9 @@
+package org.example.service;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import org.codewith.practica2_mongodb.model.Presidente;
-import org.codewith.practica2_mongodb.repository.PresidenteRepository;
+import org.example.model.Presidente;
+import org.example.repository.PresidenteRepository;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 

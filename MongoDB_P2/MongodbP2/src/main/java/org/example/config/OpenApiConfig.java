@@ -1,3 +1,5 @@
+package org.example.config;
+
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,11 +11,10 @@ public class OpenApiConfig {
 
     @Value("${app.version}")
     private String version;
-
     @Value("${spring.application.name:nome}")
     private String appName;
-
     //http://localhost:8080/swagger-ui/swagger-ui/index.html
+
     @Bean
     public OpenAPI customOpenAPI() {
 
